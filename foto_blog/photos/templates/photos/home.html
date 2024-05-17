@@ -1,0 +1,33 @@
+{% extends 'photos/base.html' %}
+{% load static %}
+{% block content %}
+<div class="image">
+    <div id="image2">
+        <img src="{% static 'media/1.jpg' %}" alt="#">
+    </div>
+</div>
+<div id="page3">
+    <img src="{% static 'media/2.jpg' %}" alt="#">
+</div>
+<div id="page4">
+    <img src="{% static 'media/3.jpg' %}" alt="#">
+</div>
+<div class="hello">
+<H1>Приветствую на моем сайте!!!</H1>
+</div>
+<div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Alias beatae, consequatur delectus,
+        deserunt exercitationem facilis fuga id in ipsam iure laboriosam libero maiores
+        nostrum obcaecati placeat quis sed totam vero?
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Alias beatae, consequatur delectus,
+        deserunt exercitationem facilis fuga id in ipsam iure laboriosam libero maiores
+        nostrum obcaecati placeat quis sed totam vero?</p>
+</div>
+<div class="registration">
+    <a href="#">Регистрация</a>
+</div>
+
+{% endblock %}

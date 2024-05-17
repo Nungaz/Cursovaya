@@ -1,0 +1,12 @@
+{% extends 'photos/base.html' %}
+{% block content %}
+
+<h1>Добавление картинки:</h1>
+<form method="post" class="bg" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="center">
+        <button class="btn">Создать</button>
+    </div>
+</form>
+{% endblock %}

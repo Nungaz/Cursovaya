@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<h1>{{ title }}:</h1>
+<div class="reg">
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn">Войти</button>
+    <p>Если не зарегистрированы то пройдите по ссылке<a href="{% url 'index' %}" class="rega">Зарегистрироваться</a></p>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="post">
+    {% if post.photo %}
+    <img class="img" src="{{ post.photo.url }}" alt="">
+    {% endif %}
+    {{ post.title }}
+    <p>{{ post.body}}</p>
+    {% for img in post.photos_set.all %}
+    <img class="imagimage" src="{{ img.add_image.url }}">
+    {% endfor %}
+</div>
+{% endblock %}

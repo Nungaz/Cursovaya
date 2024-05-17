@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+
+<ul>
+    {% for p in posts %}
+    <li>
+        <p class="first">Категория: {{ p.cat }}</p>
+        <div class="text">
+            {% if p.photo %}
+            <img class="img" src="{{ p.photo.url }}" alt="">
+            {% endif %}
+            <h2><a href="{{ p.get_absolute_url }}">{{p.title}}</a></h2>
+            <p>{{ p.body|truncatewords:49.5 }}</p>
+        </div>
+        <p class="data">дата: {{ p.time_up|date:"d-m-Y H:i:s" }}</p>
+        <p class="user">автор: {{ user.username }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

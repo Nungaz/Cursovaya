@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<h1 class="h">Приветствую вас на моей странице!)</h1><br>
+
+
+{% if request.user.is_authenticated %}
+{% else %}
+<h2>{{ title }}:</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn">Регистрация</button>
+</form>
+{% endif %}
+{% endblock %}
+
